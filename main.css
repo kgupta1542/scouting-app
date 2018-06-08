@@ -13,11 +13,11 @@
 			display:none;
 		}
 		#table{
-    		border: 3px solid white;
-    		width: device-width;
-    		vertical-align:text-top;
-    		background-color:white;
-    		border-spacing:10px;
+    			border: 3px solid white;
+    			width: device-width;
+    			vertical-align:text-top;
+    			background-color:white;
+    			border-spacing:10px;
 		}
 		.td{
 	   		vertical-align:text-top;
@@ -52,14 +52,14 @@
 		}
 		#personal{
 			background-color:white;
-    		right:0px;
-    		margin-right:10px;
-    		position:absolute;
-    		border-style:solid; 
-    		border-width:3.5px;
-    		border-color:lightgray;
-    		box-shadow:20px 20px 50px black;
-    		z-index:2;
+    			right:0px;
+    			margin-right:10px;
+    			position:absolute;
+    			border-style:solid; 
+    			border-width:3.5px;
+    			border-color:lightgray;
+    			box-shadow:20px 20px 50px black;
+    			z-index:2;
 		}
 		.up-ri{
 			position:absolute;
@@ -112,14 +112,14 @@
 			opacity:.35;
 		}
 		.btn {
-    		border: none;
-    		color: white;
-    		padding: 15px 32px;
-    		text-align: center;
-    		text-decoration: none;
-    		display: inline-block;
-    		font-size: 16px;
-    		background-color:gray;
+    			border: none;
+    			color: white;
+    			padding: 15px 32px;
+    			text-align: center;
+    			text-decoration: none;
+    			display: inline-block;
+			font-size: 16px;
+    			background-color:gray;
 		}
 		.red{
 			background-color:red;
