@@ -15,14 +15,14 @@
 			</div>
 			
 			<?php 
-				$dbc = mysqli_connect("localhost","root","1280CBiscuit","my-db","3306");
+				$dbc = mysqli_connect("localhost","root","password","schema1","port no.");
 		
 				@session_start();
 				@$id = $_SESSION["user_id"];
 				@$user_type = @SESSION['user_type'];
             	
 				@$sql = "SELECT Activated, full_name FROM mfi where user_id = '$id'";
-            	@$query = mysqli_query($dbc,$sql);
+            			@$query = mysqli_query($dbc,$sql);
             
             	if($query){
             		$row = mysqli_fetch_row($query);
