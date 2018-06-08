@@ -1,5 +1,5 @@
 <?php
-	$dbc = mysqli_connect("localhost","root","1280CBiscuit","my-db","3306");
+	$dbc = mysqli_connect("localhost","root","password","schema1","3306");
 	
 	session_start();
 	@$id = $_SESSION["user_id"];
@@ -19,7 +19,7 @@
 		
 			if($active == "Y"){?>
 				<script type="text/javascript">	
-					setTimeout(function(){ window.location.replace("http://localhost/C_Biscuit/scout.php"); }, 250);
+					setTimeout(function(){ window.location.replace("scout.php"); }, 250);
 				</script>
 		<?php }?>
 		
@@ -27,7 +27,7 @@
 			<h1 align="center"><span style="color:mediumslateblue">Already Part of The Club? </span> <br/> <span style="color:limegreen">Go Ahead and Log In!</span></h1>
 			<hr>
 			
-			<form action="http://localhost/C_Biscuit/loginscript.php" method="post">
+			<form action="loginscript.php" method="post">
         		<p align="center">
         			Username:
         			<br>
@@ -53,7 +53,7 @@
 					<span style="color:limegreen">Go Ahead and Join Today!</span>
 				</h1>
 			<hr>
-			<form action="http://localhost/C_Biscuit/sendsignupinfo.php" method="post">
+			<form action="sendsignupinfo.php" method="post">
         		<p align="center">
         			Username:
         			<br>
