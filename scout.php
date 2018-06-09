@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		
-		<div id="pre_game" class="scout">	
+		<div id="pre_game" class="scout display">	
        		<p align="center">
       			<input class="report" type="number" id="match_num" name="match_nm" placeholder="Match Number">
        				<br/>
@@ -57,7 +57,7 @@
         	</p>
         </div>
         
-        <div id="auto" class="scout display">	
+        <div id="auto" class="scout">	
        		<p align="center">Baseline:</p>
        		<div id="baseline_sel" class="btn_group">
        			<p align="center">
@@ -66,27 +66,31 @@
        			</p>
        		</div>
 				
-			<p align="center">Switch:</p>
-       		<div id="baseline_sel" class="btn_group_bi">
+			<p align="center">Switch:
+				<span id="switch_auto">0</span>
+			</p>
+       		<div id="switch_auto_sel" class="btn_group_bi">
        			<p align="center">
-       				<button name="+" class="btn plus">+</button>
-       				<button name="-" class="btn minus">-</button>
+       				<button name="plus" class="btn plus">+</button>
+       				<button name="minus" class="btn minus">-</button>
        			</p>
        		</div>			
         	
-        	<p align="center">Scale:</p>
-       		<div id="baseline_sel" class="btn_group_bi">
+        	<p align="center">Scale:
+        		<span id="scale_auto">0</span>
+        	</p>
+       		<div id="scale_auto_sel" class="btn_group_bi">
        			<p align="center">
-       				<button name="+" class="btn plus">+</button>
-       				<button name="-" class="btn minus">-</button>
+       				<button name="plus" class="btn plus">+</button>
+       				<button name="minus" class="btn minus">-</button>
        			</p>
        		</div>			
        		<br/>
         	
         	<div class="btn_group">
         		<p align="center">
-        			<button id="auto_btn" class="btn">< Pre-Game</button>
-        			<button id="auto_btn" class="btn">Tele-Op ></button>
+        			<button id="pregame_btn" class="btn">< Pre-Game</button>
+        			<button id="teleop_btn" class="btn">Tele-Op ></button>
         		</p>
         	</div>
         </div>
