@@ -18,7 +18,7 @@ var comments = "";
 function submitData() {
 	var xhttp;    
 	xhttp = new XMLHttpRequest();
-	xhttp.open("GET", "http://localhost/C_Biscuit/submit.php?mn="+match_number
+	xhttp.open("GET", "submit.php?mn="+match_number
 			+"&tn="+team_number
 			+"&a="+alliance
 			+"&start="+start_pos
@@ -31,7 +31,7 @@ function submitData() {
 			+"&ex="+exchange
 			+"&end="+endgame
 			+"&res="+result
-			+"comments="+comments, true);
+			+"&comments="+comments, true);
 	xhttp.send();
 }
 
@@ -186,6 +186,7 @@ $(document).ready(function(){
     $("#submit_btn").click(function(){//Submit data into AJAX request
     	if(endgame !== "" && result !== "" && comments !== ""){
     		submitData();
+    		alert("Scouting data has enetered database!");
     	}
     	else{
     		alert("Please fill in all information before moving on!");
