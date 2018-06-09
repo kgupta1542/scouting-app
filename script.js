@@ -188,7 +188,7 @@ $(document).ready(function(){
     $("#submit_btn").click(function(){//Submit data into AJAX request
     	if(endgame !== "" && result !== "" && comments !== ""){
     		submitData();
-    		alert("Scouting data has enetered database!");
+    		alert("Scouting data has entered the database!");
     		
     	}
     	else{
