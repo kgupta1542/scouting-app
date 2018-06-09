@@ -128,15 +128,21 @@
     		text-decoration: none;
     		display: inline-block;
     		font-size: 16px;
-    		background-color:gray;
+    		background-color:slategray;
+		}
+		.btn_group_bi .btn:active{
+			opacity:1;
+			background-color: darkslategray;
 		}
 		.plus{
 			font-size:40px;
 			padding:6px 19px;
+			opacity:.9;
 		}
 		.minus{
 			font-size:40px;
 			padding:6px 24px;
+			opacity:.9;
 		}
 		.red{
 			background-color:red;
