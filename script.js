@@ -33,6 +33,8 @@ function submitData() {
 			+"&res="+result
 			+"&comments="+comments, true);
 	xhttp.send();
+	
+	setTimeout(function(){ window.location.replace("scout.php"); }, 250);
 }
 
 //JQuery scripts
@@ -187,6 +189,7 @@ $(document).ready(function(){
     	if(endgame !== "" && result !== "" && comments !== ""){
     		submitData();
     		alert("Scouting data has enetered database!");
+    		
     	}
     	else{
     		alert("Please fill in all information before moving on!");
