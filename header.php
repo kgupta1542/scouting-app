@@ -15,7 +15,7 @@
 			</div>
 			
 			<?php 
-				$dbc = mysqli_connect("localhost","root","C_BiscuitApp","my-db","3306");
+				$dbc = mysqli_connect("localhost","root","password","schema1","3306");
 		
 				@session_start();
 				@$id = $_SESSION["user_id"];
