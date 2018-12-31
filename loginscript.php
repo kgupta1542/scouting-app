@@ -20,7 +20,7 @@
 		<h1 align="center"><span style="color:mediumslateblue">
 		
 		<?php
-			if($query7){
+			if(@$query7){
 				$row = mysqli_fetch_row($query7);
 				$user_id = $row[0];
 				$dbUsername = $row[1];
@@ -31,23 +31,19 @@
 				if($active == "N" && password_verify($password, $dbPassword) && $username == $dbUsername && $username !== ""){
 					$sql9 = "update MFI set activated = 'Y' where user_id = '$user_id'";
 					$query1 = mysqli_query($dbc,$sql9);?>
-					You Are Logged In
+					You Are Logged In As A
 				<?php
 					$_SESSION["user_id"] = $user_id;
 					$_SESSION["user_type"] = $user_type;
 				
-					if($user_type == "admin"){?>
-						As An Admin!
-						<br/>
-						Please visit the <a href="analytics.php">analytics</a>!
-					<?php }
-					else{?>
-						As A User!
-						<script type="text/javascript">	
-							setTimeout(function(){ window.location.replace("scout.php"); }, 3000);
-						</script>
-					<?php }	
-				}
+					echo(" " . ucwords($user_type));
+					?>
+					
+					<script type="text/javascript">
+						setTimeout(function(){ window.location.replace("scout.php"); }, 750);
+					</script>
+				
+				<?php }
 				else{
 					if($active == "Y"){?>
 						This account is currently being used on another device. 
@@ -58,14 +54,14 @@
 						Please Try Again!
 				<?php }?>
 					<script type="text/javascript">	
-						setTimeout(function(){ window.location.replace("index.php"); }, 4000);
+						setTimeout(function(){ window.location.replace("index.php"); }, 750);
 					</script>
 				<?php }
 			}
 			else{ ?>
 				Please Try Again!
 				<script type="text/javascript">	
-					setTimeout(function(){ window.location.replace("index.php"); }, 4000);
+					setTimeout(function(){ window.location.replace("index.php"); }, 750);
 				</script>
 			<?php } ?>
 				<br/>

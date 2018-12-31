@@ -4,7 +4,14 @@
 	</head>
 	<body>
 		<?php 
-			include_once 'header.php'; 
+			include_once 'header.php';
+			
+			if($member !== "admin" && $member !== "user"){?>
+				<script type="text/javascript">	
+					setTimeout(function(){ window.location.replace("loginscript.php"); }, 5);
+				</script>
+				<?php 
+			}
 		?>
 
 		<h1 align="center"><span style="color:mediumslateblue">Ready to Scout?</span></h1>
@@ -22,7 +29,19 @@
 						<br/>
 				<p class="fixed">Alliance:</p>
 					<p id="alliance" class="fixed"></p>
+						<br/>
+						<br/>
+						<br/>
+				<p class="fixed">
+					<button id="show_cmt" class="btn">Take Notes</button>
+				</p>
 			</div>
+		</div>
+		
+		<div id="comment_box">
+			<p align="center">
+				<textarea class="display" id="comment" rows="6" cols="65"></textarea>
+			</p>
 		</div>
 		
 		<div id="pre_game" class="scout">	

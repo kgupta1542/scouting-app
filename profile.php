@@ -5,6 +5,13 @@
 	<body>
 		<?php 
 			include_once 'header.php'; 
+			
+			if($member !== "admin" && $member !== "user"){?>
+				<script type="text/javascript">	
+					setTimeout(function(){ window.location.replace("loginscript.php"); }, 5);
+				</script>
+				<?php 
+			}
 		?>
 	
 		<h1 align="center"><span style="color:mediumslateblue">Did You Need To Change Something? </span> <br/> <span style="color:limegreen">You Can Fix It Right Away!</span></h1>

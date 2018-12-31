@@ -32,9 +32,6 @@
 					$user_id = $row1[0];
 			
 					$_SESSION["user_id"] = $user_id;
-			
-					$sql15 = "update MFI set activated = 'Y' where user_id = '$user_id';";
-					$query55 = mysqli_query($dbc,$sql15);
 				}
 			}
 			else{?>

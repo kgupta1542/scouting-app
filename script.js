@@ -51,6 +51,18 @@ $(document).ready(function(){
         $(this).siblings().addClass("light"); 
         $(this).removeClass("light");
     });
+    $("#show_cmt").click(function(){
+    	$("#comment").toggleClass("display");
+    });
+    $(".avg").click(function(){
+    	var id = $(this).attr("id");
+    	$("#data-"+id).toggleClass("display");
+    });
+    $(document).keydown(function(keyPressed) {
+    	if (keyPressed.keyCode == 38) {
+    		$("#comment").toggleClass("display");
+    	}
+    });
     
     //Pre-game scouting scripts
     $("#match_num").change(function(){//Save match number
@@ -165,6 +177,10 @@ $(document).ready(function(){
     	if(switch_personal >= 0 && switch_other >= 0 && scale >= 0 && exchange >= 0){
     		$("#teleop").toggleClass("display");
     		$("#endgame").toggleClass("display");
+    		
+    		var value = $("#comment").val();
+    		$("#comments").val(value);
+    		comments = value;
     	}
     	else{
     		alert("Please fill in all information before moving on!");
